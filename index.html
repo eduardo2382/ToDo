@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <main>
-        <input type="text" name="txt_tarefa" id="txt_tarefa" placeholder="Insira a tarefa:">
-        <input type="button" value="+" id="btn_adicionar">
+        <label for="txt_tarefa" id="label_input">
+            <input type="text" name="txt_tarefa" id="txt_tarefa" placeholder="Insira a tarefa:">
+            <input type="button" value="+" id="btn_adicionar">
+        </label>
+        <div id="area_tarefas">
+            <ul id="list_tarefas">
+            </ul>
+        </div>
     </main>
 
     <script src="scripts/script.js"></script>
