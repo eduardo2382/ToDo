@@ -1,5 +1,6 @@
 const btn_adicionar = document.getElementById('btn_adicionar')
 const tarefa = document.getElementById('txt_tarefa')
+var tarefafocus
 const areaitens = document.getElementById('list_tarefas')
 
 var btnsdelete
@@ -9,6 +10,7 @@ var txttarefas
 btn_adicionar.addEventListener('click', function(){
     if(verificarStringVazia(tarefa.value)){
         criarItem(tarefa.value)
+        tarefa.value = ''
     }
 })
 
@@ -119,3 +121,19 @@ function concluirtarefa(){
         }
     }
 }
+
+tarefa.addEventListener('focus', function() {
+    tarefafocus = true;
+})
+  
+tarefa.addEventListener('blur', function() {
+    tarefafocus = false
+})
+
+document.addEventListener('keypress', function(e){
+    if(tarefafocus && e.key == 'Enter'){
+        criarItem(tarefa.value)
+        tarefa.value = ''
+        tarefa.focus = true
+    }
+})

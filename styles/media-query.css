@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 767px) {  /* Celulares*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {  /* Tablets */
+    main{
+        max-width: 60vw;
+    }
+}   
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {  /* Desktop */
+    main{
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    main{
+        max-width: 60vw;
+    }
+
+    #area_tarefas li p{
+        width: 90%;
+        max-width: 90%;
+        word-wrap: break-word;
+    }
+}
